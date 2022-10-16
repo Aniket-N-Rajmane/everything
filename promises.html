@@ -1,0 +1,19 @@
+<script>
+    var record= new Promise((res,rej)=>{
+        console.log(typeof res,typeof rej);
+        res("task is comp")
+        //rej("task is incomp")
+    })
+    console.log(record);
+
+   //record.then((value)=>{
+       // console.log(value);
+   // }) // then as handler
+    record.catch((Error)=>{
+        console.log(Error);
+    }).finally(()=>{
+        console.log("proceed");
+    })
+// promise is used to perform asynchronise operation
+
+</script>
